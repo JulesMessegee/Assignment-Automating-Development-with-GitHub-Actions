@@ -18,10 +18,10 @@ jobs:
         dotnet-version: '5.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src/HelloWorld/HelloWorld.csproj
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build src/HelloWorld/HelloWorld.csproj --no-restore
 
     - name: Run tests
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test src/HelloWorld.Tests/HelloWorld.Tests.csproj --no-restore --verbosity normal
