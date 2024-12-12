@@ -4,11 +4,16 @@ on:
     types: [opened]
 
 jobs:
-  assign:
+  auto-assign:
+    name: Auto-assign Issue
     runs-on: ubuntu-latest
+
     steps:
-      - name: Assign Issue
-        uses: pozil/auto-assign-issue@v2 #actions-ecosystem/action-assign@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          assignees: JulesMessegee
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Assign Issue
+      uses: pozil/auto-assign-issue@v2
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        assignees: JulesMessegee
