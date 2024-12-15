@@ -25,3 +25,4 @@ jobs:
 
     - name: Run tests
       run: dotnet test src/HelloWorld.Tests/HelloWorld.Tests.csproj --no-restore --verbosity normal
+

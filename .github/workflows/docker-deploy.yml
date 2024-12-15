@@ -20,3 +20,4 @@ jobs:
 
     - name: Push Docker image
       run: docker push julesmessegee/workflow-repo:latest
+
